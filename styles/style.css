@@ -12,7 +12,7 @@
 		left:0px;
 		height: 100vh;
 		background: rgb(26, 26, 26);
-		border: 1px solid rgb(41, 41, 41);
+		border-right: 1px solid rgb(41, 41, 41);
 		width: 300px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 	}
@@ -44,7 +44,7 @@
 		user-select: none;
 		cursor: pointer;
 		height: 50px;
-		transition: 1.5s;
+		transition: 0.5s;
 		line-height: 40px;
 		color:white;
 		vertical-align: middle;
@@ -71,6 +71,215 @@
 	.nav .menu .item:hover {
 		box-shadow: 0 0 10px white;
 	}
+
+	.nav .author {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+		height: 50px;
+		border-radius: 6px;
+	}
+	.nav .author .image {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 50px;
+		height: 50px;
+		border-radius: 100px;
+		background:url(../img/author.jpg) no-repeat;
+		background-size: 100%;
+	}
+	.nav .author .name {
+		position: absolute;
+		left: 60px;
+		top: 5px;
+		line-height: 20px;
+		font-size:16px;
+		color: white;
+		font-family: "Montserrat", sans-serif;
+	}
+	.nav .author .description {
+		position: absolute;
+		bottom: 5px;
+		font-family: "Montserrat", sans-serif;
+		left: 60px;
+		opacity: 0.3;
+		color: white;
+
+	}
+	.content {
+		position: fixed;
+		top:0px;
+		left: 300px;
+		right: 0px;
+		bottom:0px;
+	}
+	.content .global {
+		width: 40vw;
+		border: 1px solid rgb(41, 41, 41);
+		height: calc(40vw / 4 * 3);
+		position: absolute;
+		left: 25px;
+		top: 25px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+		background: linear-gradient(360deg, black, rgba(0, 0, 0, 0) 50%), url("../img/global-01-01-23.png") no-repeat;
+		background-size: 100%;
+		user-select: none;
+		transition: 0.3s;
+	}
+	.content .global .title {
+		position: absolute;
+		bottom: 25px;
+		left: 25px;
+		color: white;
+		font-size: 24px;
+		z-index: 999;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+
+	}
+	.content .global:hover {
+		box-shadow: 0 0 10px rgb(0, 0, 0, 0.7);
+		transform: scale(1.005);
+		cursor: 	pointer;
+	}
+	.content .global:before {
+		position: absolute;
+		content: "";
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		border-radius: 8px;
+		background: rgba(0, 0, 0, 0);
+		transition: 0.3s;
+	}
+	.content .global:hover:before {
+		background: rgba(0, 0, 0, 0.7);
+		backdrop-filter: blur(5px);
+		border: 1px solid rgb(41, 41, 41);
+	}
+	.content .news {
+		position: absolute;
+		right: 25px;
+		width: calc(100vw - 300px - 25px - 25px - 25px - 40vw);
+		top: 25px;
+		height: calc(100vh - 50px);
+		overflow-y: auto;
+	}
+	.content .news .title {
+		position: relative;
+		padding: 25px;
+		padding-bottom: 15px;
+		user-select: none;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		font-size: 36px;
+		color: white;
+	}
+	.content .news .item {
+		position: relative;
+		background: rgba(255, 255, 255, 0.02);
+		border-radius: 10px;
+		width: calc(100% - 50px - 40px);
+		margin-left: 25px;
+		transition: 0.3s;
+		margin-right: 25px;
+		padding: 20px;
+		margin-bottom: 15px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	}
+	.content .news .item .author {
+		position: absolute;
+		display: inline-block;
+		color: white;
+		font-family: "Montserrat", sans-serif;
+		opacity: 0.5;
+		right: 25px;
+		text-align: right;
+	}
+	.content .news .item .name {
+		display: inline-block;
+		color: white;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+	}
+	.content .news .item .click {
+		position: absolute;
+		display: inline-block;
+		color: white;
+		font-family: "Montserrat", sans-serif;
+		opacity: 0.5;
+		right: 25px;
+		text-align: right;
+		bottom: 15px;
+	}
+	.content .news .item .date {
+
+		display: block;
+		color: white;
+		font-family: "Montserrat", sans-serif;
+		opacity: 0.5;
+		padding-top: 6px;
+	}
+
+	.content .news .item:hover {
+		box-shadow: 0 0 10px rgb(0, 0, 0, 0.7);
+		transform: scale(1.005);
+		cursor: 	pointer;
+	}
+
+	::-webkit-scrollbar {
+	  width: 6px;               /* ширина scrollbar */
+	}
+	::-webkit-scrollbar-track {
+	  background: transparent;        /* цвет дорожки */
+	}
+	::-webkit-scrollbar-thumb {
+	  background-color:  rgba(255, 255, 255, 0.1);    /* цвет плашки */
+	  border-radius: 20px;       /* закругления плашки */
+	  border: 1px solid rgb(41, 41, 41);  /* padding вокруг плашки */
+	}
+
+	.content .notify {
+		width: 40vw;
+		border: 1px solid rgb(41, 41, 41);
+		height: calc(100vh - (40vw / 4 * 3) - 25px - 25px - 25px);
+		position: absolute;
+		left: 25px;
+		bottom: 25px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+		background: rgba(255, 255, 255, 0.1 );
+		background-size: 100%;
+		user-select: none;
+		transition: 0.3s;
+	}
+	.content .notify .title {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		color: white;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 900;
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.content .notify .message {
+		font-family: "Open Sans";
+		position: absolute;
+		top: 80px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		color: white;
+		font-weight: 600;
+		font-size: 18px;
+	}
+
 
 
 }
