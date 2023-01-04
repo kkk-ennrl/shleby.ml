@@ -1,0 +1,32 @@
+[
+	{
+		"name":"Главная",
+		"url":"/",
+		"icon":"icon-home.svg",
+		"size":"80%"
+	},
+	{
+		"name":"KKKCam",
+		"url":"/kkkcam",
+		"icon":"icon-cam.png",
+		"size":"50%"
+	},
+	{
+		"name":"Instagram",
+		"url":"https://instagram.com/kkk_ennrl",
+		"icon":"icon-instagram.svg",
+		"size":"80%"
+	},
+	{
+		"name":"Вконтакте",
+		"url":"https://vk.com/kkk_ennrl",
+		"icon":"icon-vk.svg",
+		"size":"80%"
+	},
+	{
+		"name":"Telegram",
+		"url":"https://t.me/",
+		"icon":"icon-telegram.svg",
+		"size":"80%"
+	}
+]
